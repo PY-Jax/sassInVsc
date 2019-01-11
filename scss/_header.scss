@@ -1,0 +1,6 @@
+.header{
+    width: 100%;
+    font-size: $fs12;
+    @extend %borderB;
+    @include transform(rotate(-10deg))
+}

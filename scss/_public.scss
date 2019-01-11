@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+// 变量
+$fs12: 12px;
+
+// 继承
+%borderB{
+    border-width:0 0 1px 0;
+    border-color:#eee;
+    border-style:solid;
+}
+
+// 函数
+@mixin transform($type){
+    transform: $type;
+    -webkit-transform: $type;
+    -moz-transform: $type;
+    -ms-transform: $type;
+    -o-transform: $type;
+}
