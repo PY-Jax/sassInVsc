@@ -1,6 +1,34 @@
-body{
+@charset "UTF-8";
+html,
+body {
     margin: 0;
     padding: 0;
+	height: 100%;
+}
+body{
+	-webkit-overflow-scrolling: touch; /* ios5+ */
+	/* 处理ios端改变字体大小 */
+	-webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+}
+
+html {
+    @include root-font-size();
+}
+
+.none{
+	display: none !important;
+}
+.flexcc{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+.container{
+	height: 100%;
+	background: #f9f9f9;
+	position: relative;
 }
 
 // 变量
@@ -20,4 +48,11 @@ $fs12: 12px;
     -moz-transform: $type;
     -ms-transform: $type;
     -o-transform: $type;
+}
+// 实例
+.test{
+    width: 100%;
+    font-size: $fs12;
+    @extend %borderB;
+    @include transform(rotate(-10deg))
 }

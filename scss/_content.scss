@@ -1,0 +1,18 @@
+.mid{
+	position: absolute;
+	top: px2rem(100);
+	bottom: px2rem(100);
+	left: 0;
+	right: 0;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #eee;
+	box-sizing: border-box;
+	.banner{
+		width: 100%;
+		height: px2rem(400);
+		background: #3d979c;
+		font-size: px2rem(34);
+		color: #fff;
+	}
+}

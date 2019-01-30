@@ -1,15 +1,106 @@
+@charset "UTF-8";
+/* 移动端页面设计稿宽度 */
+/* 移动端页面设计稿dpr基准值 */
+/* 将移动端页面分为10块 */
+/* 缩放所支持的设备最小宽度 */
+/* 缩放所支持的设备最大宽度 */
+/*
+    rem与px对应关系，1rem代表html font-size值（为一块的宽度），$rem即为$px对应占多少块
+
+        $px                    $rem
+    -------------    ===    ------------
+    $design-width              $blocks
+*/
+/* html根元素的font-size定义，简单地将页面分为$blocks块，方便计算 */
+/* 单位px转化为rem */
+/* 单位rem转化为px，可用于根据rem单位快速计算原px */
+/**
+ * 实现固定宽高比
+ * @param  {string} $position: relative      定位方式
+ * @param  {string} $width:    100%          容器宽度
+ * @param  {string} $sub:      null          容器的目标子元素
+ * @param  {number} $aspectX:  1             容器宽
+ * @param  {number} $aspectY:  1             容器高
+ */
+/* 设置容器拉伸的最小宽度 */
+/* 设置容器拉伸的最大宽度 */
+/* 设置字体大小，不使用rem单位， 根据dpr值分段调整 */
+html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
-.header {
+body {
+  -webkit-overflow-scrolling: touch;
+  /* ios5+ */
+  /* 处理ios端改变字体大小 */
+  -webkit-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+      text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+
+html {
+  font-size: 10vw;
+  /* 最小宽度定义 */
+  /* 最大宽度定义 data-content-max*/
+}
+
+html body {
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 320px;
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 32px;
+  }
+}
+
+html[data-content-max] body[data-content-max] {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 768px;
+}
+
+@media screen and (min-width: 768px) {
+  html[data-content-max] {
+    font-size: 76.8px;
+  }
+}
+
+.none {
+  display: none !important;
+}
+
+.flexcc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  height: 100%;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.test {
   border-width: 0 0 1px 0;
   border-color: #eee;
   border-style: solid;
 }
 
-.header {
+.test {
   width: 100%;
   font-size: 12px;
   transform: rotate(-10deg);
@@ -17,5 +108,90 @@ body {
   -moz-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
   -o-transform: rotate(-10deg);
+}
+
+.header {
+  height: 1.33333rem;
+  background: #3588fc;
+  font-size: 0.53333rem;
+  color: #fff;
+}
+
+.mid {
+  position: absolute;
+  top: 1.33333rem;
+  bottom: 1.33333rem;
+  left: 0;
+  right: 0;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #eee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mid .banner {
+  width: 100%;
+  height: 5.33333rem;
+  background: #3d979c;
+  font-size: 0.45333rem;
+  color: #fff;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.33333rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .btn-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .btn-box .title-nav {
+  font-size: 0.32rem;
+  color: #999;
+}
+
+.footer .btn-box .icon-nav {
+  display: block;
+  width: 0.66667rem;
+  height: 0.66667rem;
+}
+
+.footer .btn-box .icon-nav:nth-child(2) {
+  display: none;
+}
+
+.footer .btn-box.active .title-nav {
+  color: #3588FC;
+}
+
+.footer .btn-box.active .icon-nav:nth-child(2) {
+  display: block;
+}
+
+.footer .btn-box.active .icon-nav:nth-child(1) {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

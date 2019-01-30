@@ -1,6 +1,6 @@
 .header{
-    width: 100%;
-    font-size: $fs12;
-    @extend %borderB;
-    @include transform(rotate(-10deg))
+	height: px2rem(100);
+	background: #3588fc;
+	font-size: px2rem(40);
+	color: #fff;
 }

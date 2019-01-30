@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-content-max>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,43 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <div class="header">
-        这是头部
+<body data-content-max>
+    <div class="container">
+        <div class="header flexcc">
+            sass安装及rem-vw案例
+        </div>
+        <div class="mid">
+            <div class="banner flexcc">
+                750*1334设计稿中宽高为750*400时
+            </div>
+        </div>
+        <div class="footer">
+            <div class="btn-box active">
+                <img class="icon-nav" src="images/nav_client.png">
+                <img class="icon-nav" src="images/nav_client_s.png">
+                <span class="title-nav">菜单一</span>
+            </div>
+            <div class="btn-box">
+                <img class="icon-nav" src="images/nav_product.png">
+                <img class="icon-nav" src="images/nav_product_s.png">
+                <span class="title-nav">菜单二</span>
+            </div>
+            <div class="btn-box">
+                <img class="icon-nav" src="images/nav_report.png">
+                <img class="icon-nav" src="images/nav_report_s.png">
+                <span class="title-nav">菜单三</span>
+            </div>
+            <div class="btn-box">
+                <img class="icon-nav" src="images/nav_setup.png">
+                <img class="icon-nav" src="images/nav_setup_s.png">
+                <span class="title-nav">菜单四</span>
+            </div>
+        </div>
     </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')
+    </script>
+    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

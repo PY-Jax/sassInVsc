@@ -1,0 +1,38 @@
+.footer{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: px2rem(100);
+	width: 100%;
+	display: flex;
+	.btn-box{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.title-nav{
+			font-size: px2rem(24);
+			color: #999;
+		}
+		.icon-nav{
+			display: block;
+			width: px2rem(50);
+			height: px2rem(50);
+		}
+		.icon-nav:nth-child(2){
+			display: none;
+		}
+		&.active{
+			.title-nav{
+				color: #3588FC;
+			}
+			.icon-nav:nth-child(2){
+				display: block;
+			}
+			.icon-nav:nth-child(1){
+				display: none;
+			}
+		}
+	}
+}

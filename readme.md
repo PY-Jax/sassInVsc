@@ -1,6 +1,7 @@
 # VSC中使用scss
 ## 插件扩展中搜索：Live Sass Compiler
 ## 在vsc用户设置中搜索： Live Sass Compiler找到settings.json编辑中找到liveSassCompile.settings.formats的配置项，将"savePath"的值改成："~/../css/"
+## 在目录下创建scss和css文件夹，并在scss文件夹里创建style.scss文件
 ## 在vsc的命令面板中输入（ctrl+shift+p）：>Live Sass:Watch Sass开启，此时css文件夹中自动增加.css文件
 ### 在插件扩展中搜索：css-auto-prefix，安装兼容浏览器css输入插件
 
